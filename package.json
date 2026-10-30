@@ -1,0 +1,12 @@
+{
+  "name": "folio",
+  "version": "1.0.0",
+  "description": "Turn your projects into a portfolio website you can host for free. Runs in your browser; nothing is uploaded.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "build": "node tools/build.js",
+    "serve": "node tools/build.js && node tools/serve.js"
+  },
+  "license": "MIT"
+}
