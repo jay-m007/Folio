@@ -259,6 +259,23 @@ function drawShot(label, w, hgt, hue, round) {
   return c.toDataURL("image/jpeg", 0.8);
 }
 
+/* ---------- colour mode (auto, light, dark) ---------- */
+const MODES = ["auto", "light", "dark"], MODE_LABEL = { auto: "◐ Auto", light: "☀ Light", dark: "☾ Dark" };
+function currentMode() { try { const m = localStorage.getItem("folio.mode"); return MODES.includes(m) ? m : "auto"; } catch { return "auto"; } }
+function applyMode(m) {
+  if (m === "auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme", m);
+  const b = $("themeBtn"); b.textContent = MODE_LABEL[m];
+  b.setAttribute("aria-label", `Colour mode: ${m}. Press to change.`);
+  const bg = getComputedStyle(document.documentElement).getPropertyValue("--ink").trim();
+  document.querySelector('meta[name="theme-color"]').setAttribute("content", bg || "#12161b");
+}
+$("themeBtn").addEventListener("click", () => {
+  const next = MODES[(MODES.indexOf(currentMode()) + 1) % MODES.length];
+  try { next === "auto" ? localStorage.removeItem("folio.mode") : localStorage.setItem("folio.mode", next); } catch {}
+  applyMode(next); toast(next === "auto" ? "Colour mode follows your device." : `Colour mode: ${next}.`);
+});
+applyMode(currentMode());
+
 /* ---------- layout toggles ---------- */
 function setView(preview) {
   document.body.classList.toggle("view-preview", preview);

@@ -4,16 +4,17 @@ Turn your projects into a portfolio website you can host for free. Fill in a sho
 
 **Try it:** https://jay-m007.github.io/Folio/ (tap "See an example" to look around)
 
-| The builder | A finished site | On a phone |
-|---|---|---|
-| ![Builder](docs/shot-2-example.png) | ![Midnight theme](docs/shot-3-midnight.png) | ![Phone](docs/shot-4-phone.png) |
+| The builder | Dark mode | A finished site | On a phone |
+|---|---|---|---|
+| ![Builder](docs/shot-2-example.png) | ![Dark mode](docs/shot-5-dark.png) | ![Midnight theme](docs/shot-3-midnight.png) | ![Phone](docs/shot-4-phone.png) |
 
 ## What it does
 
 - **Four short steps.** About you, projects, look, put it online. A live preview beside the form updates as you type, in desktop or phone width.
 - **Import from GitHub.** Type a username and pick which public repositories to add. Forks and archived repos are left unticked and your profile repo is skipped. It can also fill empty profile fields (name, bio, location, website).
 - **Screenshots and a photo.** Choose a file and it is cropped or shrunk in your browser to a small JPEG. Nothing is uploaded.
-- **Three themes.** Clean, Midnight and Journal, each responsive.
+- **Three themes.** Clean, Midnight (dark) and Journal, each responsive.
+- **Light and dark mode for the builder.** Follows your device by default, or press the button in the top bar to choose Light or Dark. Your choice is remembered on this device.
 - **A site you own.** The download is a zip with `index.html`, `style.css`, your images and a README with the steps to publish on GitHub Pages. It has no scripts, no trackers and no dependencies, and works on any static host (GitHub Pages, Netlify, Cloudflare Pages).
 - **A to-do list.** It tells you what is still missing, such as a project with no link.
 - **Yours to keep.** Autosaves in your browser. Back up and restore as JSON.
